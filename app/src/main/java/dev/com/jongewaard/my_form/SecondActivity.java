@@ -5,8 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 /**
  * Created by german on 6-11-17.
@@ -29,15 +28,7 @@ public class SecondActivity extends AppCompatActivity {
 
         //Tomar los datos del Intent
         Bundle bundle = getIntent().getExtras();
-        if(bundle != null && bundle.getString("greeter") != null ){
-            String greeter = bundle.getString("greeter");
 
-            Toast.makeText(SecondActivity.this, greeter, Toast.LENGTH_LONG).show();
-
-          //  textView.setText(greeter);
-        }else{
-            Toast.makeText(SecondActivity.this, "It is empty!", Toast.LENGTH_LONG).show();
-        }
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
