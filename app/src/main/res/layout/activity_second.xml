@@ -41,7 +41,7 @@
     </RadioGroup>
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/seekBar_Age"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_Edad"
+        android:id="@+id/textView_Age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

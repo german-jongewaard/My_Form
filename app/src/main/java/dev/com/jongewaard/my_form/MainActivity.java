@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setIcon(R.mipmap.ic_form);
 
         // Instanciamos los elementos de la UI con sus referencias
-        eTxt_Intro_Name = (EditText) findViewById(R.id.editText_Intro_Name);
-        btnNext = (Button) findViewById(R.id.btn_Next_Step_Main);
+        eTxt_Intro_Name = findViewById(R.id.editText_Intro_Name);
+        btnNext = findViewById(R.id.btn_Next_Step_Main);
 
         // Evento click del botón para pasar al siguiente Activity
         btnNext.setOnClickListener(new View.OnClickListener() {
