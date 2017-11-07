@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -70,9 +71,23 @@ public class SecondActivity extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+                // Declaramos nuestras restricciones de edad en el evento en que el usuario suelta/deja el seekbar.
+                age = seekBar.getProgress();
+                textView_Age.setText(age + "");
 
+                if (age > MAX_AGE) {
+                    btnNext.setVisibility(View.INVISIBLE);
+                    Toast.makeText(SecondActivity.this, "The max age allowed is: "+MAX_AGE+" years old.", Toast.LENGTH_LONG).show();
+                } else if (age < MIN_AGE) {
+                    btnNext.setVisibility(View.INVISIBLE);
+                    Toast.makeText(SecondActivity.this, "The min age allowed is: "+MIN_AGE+" years old.", Toast.LENGTH_LONG).show();
+                } else {
+                    btnNext.setVisibility(View.VISIBLE);
+                }
             }
         });
+
+             
 
 
         btnNext.setOnClickListener(new View.OnClickListener() {
