@@ -87,15 +87,18 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
-             
-
-
+        // Evento click del botón para pasar al siguiente Activity
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+                intent.putExtra("name", name);
+                intent.putExtra("age", age);
+                // Si el botón de greeter esta activo, option valdrá 1, si no, 2
+                int option = (radioButton_Greeter.isChecked()) ? GREETER_OPTION:FAREWELL_OPTION;
+                intent.putExtra("option", option);
                 startActivity(intent);
-
+                Toast.makeText(SecondActivity.this, seekBar_Age.getProgress() + "", Toast.LENGTH_LONG).show();
             }
         });
 

@@ -21,12 +21,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Forzar el logo, en todas las versiones android
-        getSupportActionBar().setLogo(R.mipmap.ic_form);
+        getSupportActionBar().setLogo(R.mipmap.form);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         //Forzar y cargar  icono en el Action Bar
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.ic_form);
+        getSupportActionBar().setIcon(R.mipmap.form);
 
         // Instanciamos los elementos de la UI con sus referencias
         eTxt_Intro_Name = findViewById(R.id.editText_Intro_Name);
