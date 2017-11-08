@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     // Elementos UI
     private View btnNext;
+    private View btnGird;
     private EditText eTxt_Intro_Name;
 
     @Override
@@ -31,6 +32,17 @@ public class MainActivity extends AppCompatActivity {
         // Instanciamos los elementos de la UI con sus referencias
         eTxt_Intro_Name = findViewById(R.id.editText_Intro_Name);
         btnNext = findViewById(R.id.btn_Next_Step_Main);
+        btnGird = findViewById(R.id.buttonGird);
+
+        // Evento click del botón para pasar al siguiente Activity
+        btnGird.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, GirdActivity.class);
+
+                startActivity(intent);
+            }
+        });
 
         // Evento click del botón para pasar al siguiente Activity
         btnNext.setOnClickListener(new View.OnClickListener() {
