@@ -8,4 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ActionBarLight" parent="android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#FFEB3B</item>
+    </style>
+    <style name="Theme.BromasWhatsApp" parent="Base.AppTheme" />
+
+    <style name="Base.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#009688</item>
+        <item name="colorPrimaryDark">#00796B</item>
+        <item name="colorAccent">#4CAF50</item>
+        <item name="android:textColorLink">#B2DFDB</item>
+
+    </style>
+
 </resources>
